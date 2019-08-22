@@ -1,3 +1,3 @@
 package com.blink22.mvpinteractorsskeleton.data.network
 
-class APIHelperImp : APIHelper
+class ApiHelperImp : ApiHelper
