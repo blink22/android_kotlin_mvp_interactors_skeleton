@@ -2,9 +2,14 @@ package com.blink22.mvpinteractorsskeleton.ui.base.presenter
 
 import com.blink22.mvpinteractorsskeleton.ui.base.interactor.BaseInteractor
 import com.blink22.mvpinteractorsskeleton.ui.base.view.BaseView
+import com.blink22.mvpinteractorsskeleton.utils.SchedulerProvider
+import io.reactivex.disposables.CompositeDisposable
 
-abstract class BasePresenterImp<V: BaseView, I: BaseInteractor> (internal val interactor: I? = null)
-    : BasePresenter<V, I> {
+abstract class BasePresenterImp<V: BaseView, I: BaseInteractor> (
+    internal val interactor: I? = null,
+    internal val schedulerProvider: SchedulerProvider? = null,
+    internal val compositeDisposable: CompositeDisposable? = null
+) : BasePresenter<V, I> {
 
     private var view: V? = null
 
@@ -12,5 +17,8 @@ abstract class BasePresenterImp<V: BaseView, I: BaseInteractor> (internal val in
 
     override fun getView(): V? = view
 
-    override fun onDetach() { view = null }
+    override fun onDetach() {
+        view = null
+        compositeDisposable?.dispose()
+    }
 }
