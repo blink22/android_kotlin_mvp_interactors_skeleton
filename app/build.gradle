@@ -58,4 +58,16 @@ dependencies {
     // reactive
     implementation "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
     implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    // parser
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    // okHttp3
+    implementation "com.squareup.okhttp3:okhttp:$okHttp3_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3_version"
 }
