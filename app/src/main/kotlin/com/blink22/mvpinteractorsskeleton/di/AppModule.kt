@@ -4,6 +4,7 @@ import com.blink22.mvpinteractorsskeleton.data.database.DatabaseHelper
 import com.blink22.mvpinteractorsskeleton.data.database.DatabaseHelperImp
 import com.blink22.mvpinteractorsskeleton.data.network.ApiHelper
 import com.blink22.mvpinteractorsskeleton.data.network.ApiHelperImp
+import com.blink22.mvpinteractorsskeleton.data.network.NetworkUtil
 import com.blink22.mvpinteractorsskeleton.data.sharedPreferences.PreferencesHelper
 import com.blink22.mvpinteractorsskeleton.data.sharedPreferences.PreferencesHelperImp
 import com.blink22.mvpinteractorsskeleton.ui.main.interactor.MainInteractor
