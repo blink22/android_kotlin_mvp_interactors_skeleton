@@ -43,7 +43,7 @@ captures/
 #*.jks
 
 # .env file
-.env
+# .env
 
 ### Android Patch ###
 gen-external-apklibs
